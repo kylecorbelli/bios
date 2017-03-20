@@ -1,0 +1,33 @@
+.TeamMember {
+  height: 80px;
+  overflow: hidden;
+}
+
+.content {
+  cursor: pointer;
+  height: 80px;
+  will-change: transition;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  composes: content;
+  font-size: 3em;
+  transition: margin-top 0.3s ease;
+}
+
+.titleList {
+  composes: content;
+  list-style-type: none;
+}
+
+.TeamMember:focus {
+  outline: 0;
+}
+
+.TeamMember:focus .name {
+  margin-top: -80px;
+}
